@@ -1,11 +1,14 @@
-window.onload = function() {
-console.log("ce mortii ma-tii");
-  function formValitator() {
-    var emailInput = document.forms['form']['email'].value;
-    console.log(emailInput);
-  }
-};
+var input = document.getElementById("email");
+var icon = document.getElementById("icon");
 
-//add .invalid input pe input
-//remove hidden from glyphicon
-//figure out how to tooltip
+function regexValidation(string) {
+  var pattern = /^((.+)(@)(\w+)(\.)(\w+)(\.)?(\w+)?)$/mig;
+  if(!pattern.test(string)) {
+    input.className += " invalidInput";
+    icon.className = icon.className.replace(/\hidden\b/,'');
+  } else {
+    input.className = input.className.replace(/\invalidInput\b/,'');
+    icon.className += " hidden";
+  }
+}
+

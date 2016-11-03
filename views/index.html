@@ -8,7 +8,6 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="../stylesheets/style.css">
-    <script src="../scripts/script.js"></script>
   </head>
 
   <body>
@@ -33,28 +32,31 @@
       <div class="mainContent">
         <div class="width">
         <!-- FORM -->
-        <div class="form col-md-6 col-xs-6">
+        <div class="form col-md-6 col-xs-12">
           <div class="icon">
             <img src="http://placehold.it/75x75" />
           </div>
-          <form class="inputs" name="form" onsubmit="return formValitator()">
-            <div class="form-group col-md-6">
+          <form class="inputs" name="form">
+            <div class="form-group col-md-6 col-xs-12">
               <label for="firstName">First Name</label>
               <input type="text" class="form-control" id="firstName">
             </div>
-            <div class="form-group col-md-6">
+            <div class="form-group col-md-6 col-xs-12">
               <label for="lastName">Last Name</label>
               <input type="text" class="form-control" id="lastName">
             </div>
-            <div class="form-group col-md-12">
+            <div class="form-group col-md-12 col-xs-12">
               <label for="company">Company</label><br>
               <input type="text" class="form-control" id="company">
             </div>
-            <div class="form-group col-md-12">
+            <div class="form-group col-md-12 col-xs-12">
               <label for="email">E-mail address</label><br>
-              <input type="email" class="form-control" pattern="^((.+)(@)(\w+)(\.)(\w+)(\.)?(\w+)?)$" required id="email"><span id="icon" class="sign glyphicon glyphicon-exclamation-sign hidden"></span>
+              <input type="email" class="form-control" onchange="regexValidation(this.value)" required id="email">
+              <div id="icon" class="sign glyphicon glyphicon-exclamation-sign hidden" >
+                <span class="tooltiptext">Invalid e-mail address</span>
+              </div>
             </div>
-            <div class="col-md-12">
+            <div class="col-md-12 col-xs-12">
               <button type="submit" class="btn button">Register</button>
             </div>
           </form>
@@ -62,7 +64,7 @@
         <!-- END FORM -->
 
         <!-- INFO -->
-        <div class="info col-md-6 col-xs-6">
+        <div class="info col-md-6 col-xs-12">
           <div class="element">
             <img src="http://placehold.it/30x30" />
             <p>Centralizes communication channels and reduces overhead.</p>
@@ -89,7 +91,7 @@
       <!-- END OF MAIN CONTENT -->
 
       <!-- FOOTER -->
-      <div class="footer">
+      <div class="footer row">
         <footer class="width">
           <div class="copyright col-md-3 col-xs-3">
             <img src="http://placehold.it/75x20" />
@@ -123,6 +125,7 @@
         </footer>
       </div>
       <!-- END OF FOOTER -->
-    <div>
+    </div>
+      <script src="../scripts/script.js"></script>
   </body>
 </html>

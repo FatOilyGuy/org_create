@@ -1,6 +1,7 @@
-html {
+html, body {
   font-family: Montserrat, Open Sans, sans-serif;
   background-color: #f7f7f7;
+  font-size: 18px;
 }
 
 .mainContainer {
@@ -55,6 +56,12 @@ header {
 .mainContent {
   background-color: #f7f7f7;
   height: 32em;
+}
+
+@media screen and (max-width: 1024px) {
+  .mainContent {
+    height: auto;
+  }
 }
 
 /*FORM*/
@@ -115,7 +122,7 @@ header {
         width: 100%;
       }
 
-      .invalidInput {
+      .inputs .invalidInput {
         border-color: #eb7474;
         background-color: #fce7e9;
       }
@@ -125,6 +132,40 @@ header {
         position: absolute;
         top: 30px;
         right: 25px;
+        display: inline-block;
+      }
+
+      .sign:hover .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+      }
+
+      .sign .tooltiptext {
+        width: 160px;
+        background-color: #eb7474;
+        color: #fff;
+        text-align: center;
+        border-radius: 3px;
+        padding: 10px 5px;
+        position: absolute;
+        z-index: 1;
+        bottom: -45px;
+        right: -50%;
+        opacity: 0;
+        transition: opacity 1s;
+        font-family: Montserrat, Open Sans, sans-serif;
+        font-size: 12px;
+      }
+
+      .sign .tooltiptext::after {
+        content: "";
+        position: absolute;
+        bottom: 100%;
+        right: 9%;
+        margin-left: -5px;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-bottom: 5px solid #eb7474;
       }
 
       .button {
@@ -182,6 +223,14 @@ header {
   bottom: 0;
   height: 14em;
   padding-top: 10px;
+}
+
+@media screen and (max-width: 1024px) {
+  .footer {
+    position: relative;
+    height: auto;
+    width: auto;
+  }
 }
 
 .footer h6 {
