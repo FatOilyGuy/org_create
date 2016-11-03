@@ -85,7 +85,9 @@ header {
       padding: 0;
       box-shadow: 0 8px 18px -6px gray;
       top: -50px;
-      margin-left: -42.5px;
+      left: 0;
+      right: 0;
+      margin: auto;
     }
 
     .inputs {
