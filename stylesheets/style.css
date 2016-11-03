@@ -1,5 +1,6 @@
 html {
-  font-family: Open Sans, sans-serif;
+  font-family: Montserrat, Open Sans, sans-serif;
+  background-color: #f7f7f7;
 }
 
 .mainContainer {
@@ -40,7 +41,7 @@ header {
 
     p {
       font-size: 0.8em;
-      color: #5fc0e4;
+      color: #8cd8f5;
       font-weight: lighter;
       margin: 0;
     }
@@ -62,12 +63,22 @@ header {
     height: 25em;
     padding: 0px 25px;
     font-size: 0.9em;
+    border: 1px solid #ececec;
+  }
+
+  @media screen and (max-width: 992px){
+    .form {
+      height: 28em;
+    }
   }
 
     .icon > img {
       border-radius: 50%;
       position: absolute;
-      top: -50px
+      padding: 0;
+      box-shadow: 0 8px 18px -6px gray;
+      top: -50px;
+      margin-left: -42.5px;
     }
 
     .inputs {
@@ -78,7 +89,7 @@ header {
     .inputs label {
       font-size: 0.8em;
       color: #9a9a9a;
-      font-weight: lighter;
+      font-weight: 300;
 
     }
 
@@ -133,6 +144,7 @@ header {
     .element p {
       text-align: justify;
       color: black;
+      font-weight: 400;
     }
 
     .element div p:first-child {
@@ -152,11 +164,12 @@ header {
 
 /*FOOTER*/
 .footer {
-  background-color: #1880a9;
+  background: linear-gradient(#15749f, #1881a9);
   width: 100%;
   position:absolute;
   bottom: 0;
-  height: 13em;
+  height: 14em;
+  padding-top: 10px;
 }
 
 .footer h6 {
