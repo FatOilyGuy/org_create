@@ -8,6 +8,7 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="../stylesheets/style.css">
+    <script src="../scripts/script.js"></script>
   </head>
 
   <body>
@@ -36,7 +37,7 @@
           <div class="icon">
             <img src="http://placehold.it/75x75" />
           </div>
-          <form class="inputs">
+          <form class="inputs" name="form" onsubmit="return formValitator()">
             <div class="form-group col-md-6">
               <label for="firstName">First Name</label>
               <input type="text" class="form-control" id="firstName">
@@ -51,7 +52,7 @@
             </div>
             <div class="form-group col-md-12">
               <label for="email">E-mail address</label><br>
-              <input type="email" class="form-control" data-error="Invalid e-mail adress" required id="email">
+              <input type="email" class="form-control" pattern="^((.+)(@)(\w+)(\.)(\w+)(\.)?(\w+)?)$" required id="email"><span id="icon" class="sign glyphicon glyphicon-exclamation-sign hidden"></span>
             </div>
             <div class="col-md-12">
               <button type="submit" class="btn button">Register</button>

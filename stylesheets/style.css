@@ -115,6 +115,18 @@ header {
         width: 100%;
       }
 
+      .invalidInput {
+        border-color: #eb7474;
+        background-color: #fce7e9;
+      }
+
+      .sign {
+        color: #961d24;
+        position: absolute;
+        top: 30px;
+        right: 25px;
+      }
+
       .button {
         color: white;
         font-size: 0.9em;
